@@ -1,0 +1,102 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Liceria & Co.</title>
+    <link rel="stylesheet" href="css.css">
+
+    <style>
+        .sidenav {
+      height: 100%;
+      width: 0;
+      position: fixed;
+      z-index: 1;
+      top: 0;
+      left: 0;
+      background-color: #111;
+      overflow-x: hidden;
+      transition: 0.5s;
+      padding-top: 60px;
+    }
+    
+    .sidenav a {
+      padding: 8px 8px 8px 32px;
+      text-decoration: none;
+      font-size: 25px;
+      color: #818181;
+      display: block;
+      transition: 0.3s;
+    }
+    
+    .sidenav a:hover {
+      color: #f1f1f1;
+    }
+    
+    .sidenav .closebtn {
+      position: absolute;
+      top: 0;
+      right: 25px;
+      font-size: 36px;
+      margin-left: 50px;
+    }
+    
+    @media screen and (max-height: 450px) {
+      .sidenav {padding-top: 15px;}
+      .sidenav a {font-size: 18px;}
+    }
+    </style>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Feedback Page</title>
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+   
+        <div id="mySidenav" class="sidenav">
+            <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+            <a href="index.html">Home</a>
+            <a href="Clothes.html">Clothes</a>
+            <a href="Electronics.html">Electronics</a>
+            <a href="Food.html">food</a>
+            <a href="FeedBacke.html">FeedBacke</a>
+          </div>
+          <span style="font-size:30px;cursor:pointer" onclick="openNav()">&#9776; open</span>
+
+          <script>
+          function openNav() {
+            document.getElementById("mySidenav").style.width = "250px";
+          }
+          
+          function closeNav() {
+            document.getElementById("mySidenav").style.width = "0";
+          }
+          </script>
+    <div class="container">
+      <h1>Feedback Form</h1>
+      <p>We value your feedback! Please fill out the form below.</p>
+      <form id="feedback-form">
+        <label for="name">Name:</label>
+        <input type="text" id="name" name="name" placeholder="Your Name" >
+  
+        <label for="email">Email:</label>
+        <input type="email" id="email" name="email" placeholder="Your Email" >
+  
+        <label for="rating">Rating:</label>
+        <select id="rating" name="rating" >
+          <option value="" disabled selected>Choose a rating</option>
+          <option value="Excellent">Excellent</option>
+          <option value="Good">Good</option>
+          <option value="Average">Average</option>
+          <option value="Poor">Poor</option>
+        </select>
+  
+        <label for="comments">Comments:</label>
+        <textarea id="comments" name="comments" rows="4" placeholder="Your feedback" ></textarea>
+  
+        <button type="submit">Submit Feedback</button>
+      </form>
+      <div id="thank-you-message" class="hidden">Thank you for your feedback!</div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,113 @@
+<html lang="ar">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Sohar Mall</title>
+  <link rel="stylesheet" href="css.css">
+  <style>
+    a:link {
+  text-decoration: none;
+  color: rgb(156, 22, 22);
+}
+.sidenav {
+      height: 100%;
+      width: 0;
+      position: fixed;
+      z-index: 1;
+      top: 0;
+      left: 0;
+      background-color: #111;
+      overflow-x: hidden;
+      transition: 0.5s;
+      padding-top: 60px;
+    }
+    
+    .sidenav a {
+      padding: 8px 8px 8px 32px;
+      text-decoration: none;
+      font-size: 25px;
+      color: #818181;
+      display: block;
+      transition: 0.3s;
+    }
+    
+    .sidenav a:hover {
+      color: #f1f1f1;
+    }
+    
+    .sidenav .closebtn {
+      position: absolute;
+      top: 0;
+      right: 25px;
+      font-size: 36px;
+      margin-left: 50px;
+    }
+    
+    @media screen and (max-height: 450px) {
+      .sidenav {padding-top: 15px;}
+      .sidenav a {font-size: 18px;}
+    }
+  </style>
+</head>
+<body>
+  <div class="app">
+    <header class="header">
+      <h1>Sohar Mall</h1>
+      <div id="mySidenav" class="sidenav">
+        <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+        <a href="index.html">Home</a>
+        <a href="clothes.html">Clothes</a>
+        <a href="Electronics.HTML">Electronics</a>
+        <a href="food.html">food</a>
+        <a href="feedback.html">FeedBacke</a>
+      </div>
+      <span style="font-size:30px;cursor:pointer" onclick="openNav()">&#9776; open</span>
+
+      <script>
+      function openNav() {
+        document.getElementById("mySidenav").style.width = "250px";
+      }
+      
+      function closeNav() {
+        document.getElementById("mySidenav").style.width = "0";
+      }
+      </script>
+      <input type="text" placeholder="Search the mall" style="text-align: center;">
+    </header>
+    <main class="menu">
+      <div class="image-item">
+       <a href="food.html"> <img src="food.jpg" alt="food"></a>
+       <br>
+        <h2>FOOD</h2>
+      </div>
+      <div class="image-item">
+        <a href="Electronics.HTML"><img src="ele.jpg" alt="electronics"></a>
+        <br>
+        <br>
+        <br>
+      
+        <br>
+        <br>
+        <h2>ELECTRONICS</h2>
+      </div>
+      <div class="image-item">
+        <a href="clothes.html"><img src="clo.jpg" alt=" clothes">
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <h2>CLOTHES</h2>
+      </div>
+    </main>
+    <footer class="footer">
+      <div><a href="feedback.html">Feed Backe</a></div>
+      <div><a href="food.html">food</a></div>
+      <div><a href="index.html">Home</a></div>
+      <div><a href="clothes.html">Clothes</a></div>
+      <div><a href="Electronics.HTML">Electronics</a></div>
+    </footer>
+  </div>
+  <script src="script.js"></script>
+</body>
+</html>

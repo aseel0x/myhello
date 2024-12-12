@@ -1,0 +1,251 @@
+<!DOCTYPE html>
+<html lang="ar">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> Clothes</title>
+    <style>
+        .sidenav {
+      height: 100%;
+      width: 0;
+      position: fixed;
+      z-index: 1;
+      top: 0;
+      left: 0;
+      background-color: #111;
+      overflow-x: hidden;
+      transition: 0.5s;
+      padding-top: 60px;
+    }
+    
+    .sidenav a {
+      padding: 8px 8px 8px 32px;
+      text-decoration: none;
+      font-size: 25px;
+      color: #818181;
+      display: block;
+      transition: 0.3s;
+    }
+    
+    .sidenav a:hover {
+      color: #f1f1f1;
+    }
+    
+    .sidenav .closebtn {
+      position: absolute;
+      top: 0;
+      right: 25px;
+      font-size: 36px;
+      margin-left: 50px;
+    }
+    
+    @media screen and (max-height: 450px) {
+      .sidenav {padding-top: 15px;}
+      .sidenav a {font-size: 18px;}
+    }
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            text-align: center;
+            direction: rtl;
+            background-color: #f4f4f4;
+        }
+        .search-bar {
+            width: 100%;
+            padding: 15px;
+            background-color: #333;
+            color: white;
+        }
+        .main-image {
+            position: relative;
+            width: 100%;
+        }
+        .main-image img {
+            width: 100%;
+            height: auto;
+        }
+        .main-image .text-overlay {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            color: white;
+            font-size: 24px;
+            background-color: rgba(0, 0, 0, 0.5);
+            padding: 10px;
+        }
+        .section {
+            margin: 30px;
+        }
+        .section h2 {
+            font-size: 24px;
+            margin-bottom: 8px;
+        }
+        .items {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+        .item {
+            background-color: white;
+            border: 1px solid #ddd;
+            margin: 10px;
+            padding: 15px;
+            width: 300px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            cursor: pointer;
+        }
+        .item img {
+            width: 100%;
+            height: auto;
+        }
+        .item h3 {
+            font-size: 18px;
+            margin: 10px 0;
+        }
+        .item p {
+            font-size: 16px;
+            color: #888;
+        }
+        .modal {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.5);
+            justify-content: center;
+            align-items: center;
+        }
+        .modal-content {
+            background-color: white;
+            padding: 20px;
+            border-radius: 5px;
+            text-align: left;
+            width: 80%;
+            max-width: 600px;
+        }
+        .modal-content img {
+            width: 100%;
+            height: auto;
+            margin-bottom: 15px;
+        }
+        .size-options {
+            display: flex;
+            justify-content: center;
+            margin-top: 15px;
+        }
+        .size-option {
+            width: 40px;
+            height: 40px;
+            border: 1px solid #ddd;
+            border-radius: 50%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin: 0 5px;
+            cursor: pointer;
+        }
+        .close {
+            position: absolute;
+            top: 10px;
+            right: 20px;
+            font-size: 30px;
+            font-weight: bold;
+            cursor: pointer;
+            color: white;
+        }
+    </style>
+</head>
+<body>
+    <div class="search-bar">
+        <input type="text" placeholder="Search..." style="width: 80%; padding: 15px;">
+        <div id="mySidenav" class="sidenav">
+            <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+            <a href="index.html">Home</a>
+            <a href="Clothes.html">Clothes</a>
+            <a href="Electronics.html">Electronics</a>
+            <a href="Food.html">food</a>
+            <a href="feedback.html">FeedBacke</a>
+          </div>
+          <span style="font-size:30px;cursor:pointer" onclick="openNav()">&#9776; open</span>
+
+          <script>
+          function openNav() {
+            document.getElementById("mySidenav").style.width = "250px";
+          }
+          
+          function closeNav() {
+            document.getElementById("mySidenav").style.width = "0";
+          }
+          </script>  
+    </div>
+    <div class="main-image">
+        <img src="fashion.png" alt="Main Image">
+    </div>
+    <div class="section">
+        <h2>Our clothes</h2>
+        <div class="items">
+            <div class="item" onclick="openModal('item1')">
+                <img src="h &m.jpg" alt="Nylon Full Zip Hoodie">
+                <br> 
+                <br>
+                <br>
+                <br>
+                <br>
+                <br>
+                <br>
+                <br>
+                <h3>H&M</h3>
+            </div>
+            <div class="item" onclick="openModal('item2')">
+                <img src="aldo.jpg" alt="Denim Track Jacket">
+                <br> 
+                <br>
+                <br>
+                <br>
+                <br>
+                <br> 
+                <br>
+                <br>
+                <h3>ALDO</h3>
+            </div>
+            <div class="item" onclick="openModal('item3')">
+                <img src="marks.jpg" alt="Suede Jacket">
+                <h3> MARKS & SPENCER</h3>
+            </div>
+        </div>
+    </div>
+    <div id="myModal" class="modal">
+        <div class="modal-content" id="modalContent"></div>
+        <span class="close" onclick="closeModal()">&times;</span>
+    </div>
+    <script>
+        function openModal(itemId) {
+            var content = '';
+            switch(itemId) {
+                case 'item1':
+                    content = '<img src="hoodie.jpg" alt="Nylon Full Zip Hoodie"><h2> Nylon Full Zip Hoodie</h2><p>6 OMR</p><p>Full nylon hoodie with cropped cuts, loose sleeves, and hood adds glamor to an everyday staple.</p>';
+                    break;
+                case 'item2':
+                    content = '<img src="denim.jpg" alt="Denim Track Jacket"><h2>DENIM TRACK JACKET/h2><p> 7 OMR</p><p>Fashionable and comfortable denim track jacket, made from high quality materials to provide style and comfort. Perfect for all occasions.</p>';
+                    break;
+                case 'item3':
+                    content = '<img src="trousers.jpg" alt="Suede Jacket"><h2>trousers JEANS</h2><p> 5 OMR</p><p> Casual High-Waist Straight-Leg Jeans for Teens – Cotton Blend (85% Cotton, 15% Polyester) </p>';
+                    break;
+            }
+            content += '<div class="size-options"><div class="size-option">S</div><div class="size-option">M</div><div class="size-option">L</div><div class="size-option">XL</div></div>';
+            document.getElementById('modalContent').innerHTML = content;
+            document.getElementById('myModal').style.display = 'flex';
+        }
+
+        function closeModal() {
+            document.getElementById('myModal').style.display = 'none';
+        }
+    </script>
+</body>
+</html>
+
+

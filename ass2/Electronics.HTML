@@ -1,0 +1,233 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Electronics</title>
+  <style>
+       .sidenav {
+      height: 100%;
+      width: 0;
+      position: fixed;
+      z-index: 1;
+      top: 0;
+      left: 0;
+      background-color: #111;
+      overflow-x: hidden;
+      transition: 0.5s;
+      padding-top: 60px;
+    }
+    
+    .sidenav a {
+      padding: 8px 8px 8px 32px;
+      text-decoration: none;
+      font-size: 25px;
+      color: #818181;
+      display: block;
+      transition: 0.3s;
+    }
+    
+    .sidenav a:hover {
+      color: #f1f1f1;
+    }
+    
+    .sidenav .closebtn {
+      position: absolute;
+      top: 0;
+      right: 25px;
+      font-size: 36px;
+      margin-left: 50px;
+    }
+    
+    @media screen and (max-height: 450px) {
+      .sidenav {padding-top: 15px;}
+      .sidenav a {font-size: 18px;}
+    }
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      background-color: #a4a1a1;
+    }
+
+    .header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 20px;
+      background-color: #fff;
+      box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    }
+
+    .header h1 {
+      font-size: 24px;
+      margin: 0;
+    }
+
+    .container {
+      padding: 20px;
+    }
+
+    .item {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 15px;
+      margin-bottom: 10px;
+      background-color: #fff;
+      border-radius: 10px;
+      box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    }
+
+    .item img {
+      width: 80px;
+      height: 80px;
+      border-radius: 10px;
+    }
+
+    .details-btn {
+      padding: 10px 15px;
+      background-color: #fae8e8;
+      color: rgb(131, 44, 44);
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+
+    .details-btn:hover {
+      background-color: #fae8e8;
+    }
+
+    .product-details {
+      display: none;
+      margin-top: 20px;
+      padding: 20px;
+      background-color: #fff;
+      border-radius: 10px;
+      box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    }
+
+    .product-details .product {
+      display: flex;
+      align-items: center;
+      gap: 15px;
+      margin-bottom: 20px;
+    }
+
+    .product img {
+      width: 100px;
+      border-radius: 10px;
+    }
+
+    .product h3 {
+      margin: 0;
+    }
+
+    .product p {
+      margin: 5px 0;
+      color: gray;
+    }
+  </style>
+</head>
+<body>
+  <div id="mySidenav" class="sidenav">
+    <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+    <a href="index.html">Home</a>
+    <a href="Clothes.html">Clothes</a>
+    <a href="Electronics.html">Electronics</a>
+    <a href="Food.html">food</a>
+    <a href="FeedBacke.html">FeedBacke</a>
+  </div>
+  <span style="font-size:30px;cursor:pointer" onclick="openNav()">&#9776; open</span>
+
+  <script>
+  function openNav() {
+    document.getElementById("mySidenav").style.width = "250px";
+  }
+  
+  function closeNav() {
+    document.getElementById("mySidenav").style.width = "0";
+  }
+  </script>
+  <div class="header">
+    <h1>ELECTRONICS</h1>
+  </div>
+
+  <div class="container">
+    <!-- Item 1 -->
+    <div class="item">
+      <img src="apple.jpg" alt="apple">
+      <div class="details">
+        <h3>APPLE</h3>
+      </div>
+      <button class="details-btn" onclick="showDetails([
+        {name: 'Apple iPhone 16 (128GB)', price: '350.500 OMR', image: 'app1.jpg', description: 'Available in all colors and excellent specifications.'},
+        {name: 'APPLE AIRPODS MAX SKY BLUE MGYL3', price: '160.900 OMR', image: 'app2.jpg', description: 
+        'Introducing AirPods Max a perfect balance of exhilarating high-fidelity audio and the effortless magic of AirPods. The ultimate personal listening experience is here.'}
+      ])">View Details</button>
+    </div>
+<!-- Item 2 -->
+<div class="item">
+  <img src="samsung.jpg" alt="samsung">
+  <div class="details">
+    <h3>SAMSUNG</h3>
+  </div>
+  <button class="details-btn" onclick="showDetails([
+    {name: 'Samsung Galaxy Buds Pro Phantom Violet', price: '73.500 OMR', image: 'sam1.jpg', description: 
+    'Intelligent ANC lets you seamlessly switch between noise canceling and fully adjustable ambient sound'},
+    {name: 'Samsung Galaxy S24 Ultra 5G 256GB 12GB Titanium Violet Dual Sim Smartphone', price: '360.00 OMR', image: 'sam2.jpg', description: 
+    'Available in 3 colors: black, beige, and blue, with the latest camera specifications.'}
+  ])">View Details</button>
+</div>
+<!-- Item 3 -->
+<div class="item">
+  <img src="canon.jpg" alt="canon">
+  <div class="details">
+    <h3>CANON</h3>
+  </div>
+  <button class="details-btn" onclick="showDetails([
+    {name: 'Canon PowerShot SX740 HS Black Compact Digital Camera Zoom Lens 40', price: '360.300 OMR', image: 'can1.jpg', description: 
+    'high-magnification zoom model with a 40x optical zoom delivers high image quality and excellent .'},
+    {name: 'Canon EOS 4000D DSLR Camera Body Black With EF-S 18-55mm III Lens Kit', price: '103.00 OMR', image: 'can2.jpg', description: 
+    'CANON EOS 4000D Easily and intuitively shoot and share distinctive stories with colour, detail and beautiful background blur that sets you apart..'}
+  ])">View Details</button>
+</div>
+    <!-- Product Details Section -->
+    <div id="product-details" class="product-details">
+      <div id="product-1" class="product">
+        <img id="product-1-image" src="" alt="Product 1 Image">
+        <div>
+          <h3 id="product-1-name"></h3>
+          <p id="product-1-price"></p>
+          <p id="product-1-description"></p>
+        </div>
+      </div>
+      <div id="product-2" class="product">
+        <img id="product-2-image" src="" alt="Product 2 Image">
+        <div>
+          <h3 id="product-2-name"></h3>
+          <p id="product-2-price"></p>
+          <p id="product-2-description"></p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script>
+    function showDetails(products) {
+      document.getElementById('product-1-name').innerText = products[0].name;
+      document.getElementById('product-1-price').innerText = products[0].price;
+      document.getElementById('product-1-image').src = products[0].image;
+      document.getElementById('product-1-description').innerText = products[0].description;
+
+      document.getElementById('product-2-name').innerText = products[1].name;
+      document.getElementById('product-2-price').innerText = products[1].price;
+      document.getElementById('product-2-image').src = products[1].image;
+      document.getElementById('product-2-description').innerText = products[1].description;
+
+      document.getElementById('product-details').style.display = 'block';
+    }
+  </script>
+</body>
+</html>
